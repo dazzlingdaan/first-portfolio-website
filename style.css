@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
+:root{
+    --background: #000000;
+    --white: #FFFFFF;
+    --pink: #A87FF3;
+} /* Variables */
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    font-family: "Poppins", sans-serif;
+}
+a{text-decoration: none;}
+ul{list-style: none;}
+
+/* Header */
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1em 8%;
+    background: var(--background);
+}
+
+/* Main */
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+.hero-outline{
+    font-family: "Anton";
+    color: var(--white);
+    text-transform: uppercase;
+}
+.hero-outline h1{
+    font-size: 7em;
+    letter-spacing: -3%;
+    line-height: 93%;
+}
+.hero-outline h2{
+    background: -webkit-linear-gradient(45deg, #FA709A, #FEE140);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4.4em;
+    letter-spacing: -3%;
+    line-height: 115%;
+}
+.social-medias{
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 3em;
+}
+.portal img{
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+/* Collaboration */
+.collab{
+    padding: 0 8%;
+    width: 100%;
+}
+.collab-wrapper{
+    border: .5px solid var(--white);
+    padding: 1.5em;
+    border-radius: 4px;
+}
+.collab-outline{
+    background-color: var(--white);
+    padding: 2em 8%;
+    border-radius: 8px;
+}
+.collab-outline h3{
+    font-size: 1.5em;
+    letter-spacing: -.6px;
+}
+.contact-btn{
+    margin-top: 1em;
+}
+.contact-btn a{
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--background);
+    padding: 1em 2em;
+    font-style: normal;
+    font-size: .75em;
+    border-radius: 24px;
+}
+.contact-btn a:hover{
+    color: var(--background);
+    background-image: linear-gradient(45deg, #FA709A, #FEE140);
+    transition: .4s ease-in;
+}
+
+/* Footer */
+.footer{
+    padding: 2em 8%;
+}
+.footer-message{
+    color: var(--white);
+    padding: 2em 8%;
+    font-weight: 300;
+    border-radius: 8px;
+    background: var(--pink);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: .5px solid var(--white);
+}
+.footer-links a{
+    font-size: 1.25em;
+}
+.footer-links img{
+    width: 1.25em;
+}
+.footer-links p{
+    color: var(--white);
+    margin: .75em;
+    font-weight: 300;
+    font-size: .625em;
+}
+
+
+
+/* For extremely small screen devices (768px and below) */
+@media only screen and (max-width: 767px) {
+    /* Header */
+    body{
+        font-size: 87.5%;
+    }
+
+    /* Logo */
+    .logo{
+        display: inline-flex;
+        align-items: center;
+        gap: .25em;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: -1px;
+    }
+    /* Menu */
+    .nav{
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        background: rgba( 0, 0, 0, 0.85 );
+        backdrop-filter: blur( 3.5px );
+        -webkit-backdrop-filter: blur( 3.5px );
+    }
+    .menu{
+        padding: 2em;
+    }
+    .nav a{
+        display: block;
+        color: var(--white);
+        padding: 1em 4%;
+    }
+    .nav a:hover{
+        background-color: var(--white);
+        color: var(--background);
+    }
+    .nav{
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+    .nav img{
+        width: 30vw;
+    }
+    .menu-footer img{
+        width: 5vw;
+    }
+    .menu-footer-wrapper{
+        display: flex;
+        padding-top: 20em;
+        align-items: center;
+    }
+    .menu-card{
+        border-radius: 8px;
+        padding: 0 8%;
+    }
+    .menu-card-container{
+        background-color: var(--white);
+        padding: 1em 2%;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+    }
+    .menu-card-wrapper h2{
+        font-style: normal;
+        text-transform: capitalize;
+    }
+    .menu-card-wrapper p{
+        font-style: normal;
+        font-weight: 400;
+        width: 50vw;
+        margin-top: .5vh;
+    }
+    .menu-social-medias img{
+        width: 2.5em;
+        padding: .5em;
+        border-radius: 8px;
+        background-color: var(--background);
+    }
+    .menu-social-medias{
+        display: flex;
+        gap: 1em;
+        margin-top: 1vh;
+    }
+    .menu-social-medias a{
+        padding: 0;
+    }
+
+    /* Hamburger Icon */
+    .hamb{
+        cursor: pointer;
+        float: right;
+        padding: 1.125em 0;
+    } /* Style label tag */
+
+    .hamb-line{
+        background: var(--white);
+        display: block;
+        height: 1px;
+        position: relative;
+        width: 24px;
+        border-radius: 8px;
+
+    } /* Style span tag */
+
+    .hamb-line::before,
+    .hamb-line::after{
+        background: var(--white);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        border-radius: 8px;
+    }
+    .hamb-line::before{
+        top: 6px;
+    }
+    .hamb-line::after{
+        top: -6px;
+    }
+
+    .side-menu{
+        display: none;
+    } /* Hide checkbox */
+
+    /* Toggle menu icon */
+    .side-menu:checked ~ nav{
+        max-height: 100%;
+    }
+    .side-menu:checked ~ .hamb .hamb-line{
+        background: transparent;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::before{
+        transform: rotate(-45deg);
+        top:0;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::after{
+        transform: rotate(45deg);
+        top:0;
+    }
+
+    /* Main content */
+    .hero-outline{
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-medias{
+        gap: 4vw;
+    }
+    .social-medias img{
+        width: 5vw;
+    }
+    .collab-outline h3{
+        line-height: 1.125em;
+        margin-bottom: .5em;
+    }
+    .portal img{
+        margin-bottom: 1em;
+    }
+    .footer-message img{ 
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .menu-card{
+        display: none;
+    }
+}
+
+/* Small screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.27 );
+        background: rgba( 0, 0, 0, 0.85 );
+        backdrop-filter: blur( 3.5px );
+        -webkit-backdrop-filter: blur( 3.5px );
+        /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    }
+    .logo {
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: .25em;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: -1px;
+    }
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+        padding: 0 6%;
+    }
+    .nav a:hover{
+        padding-bottom: .25em;
+        border-bottom: 1px solid white;
+        transition: all .4s;
+    }
+    .menu-card{
+        display: none;
+    }
+    .hamb, .side-menu{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        gap: 2.5em;
+    }
+    .menu a{
+        color: var(--white);
+    }
+    .hero{
+        padding: 4em 0;
+    }
+    .portal img{
+        width: 7em;
+    }
+    .footer-message img{
+        width: 10em;
+    }
+    .footer-message{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        padding: 0;
+
+    }
+}
+
+/* Medium screen devices (1025px and above) */
+@media only screen and (min-width: 1025px) {}
+
+/* Big screen devices (1366px and above) */
+@media only screen and (min-width: 1366px) {
+    body{
+        padding: 0 8%;
+    }
+}
+
+/* Extra big screen devices (1600px and above) */
+@media only screen and (min-width: 1600px) {
+    body{
+        padding: 0 10%;
+    }
+}
+
+/* Extra big screen devices (1921px and above) */
+@media only screen and (min-width: 1921px) {}
