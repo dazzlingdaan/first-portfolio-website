@@ -253,7 +253,7 @@ ul{list-style: none;}
         background: var(--white);
         content: '';
         display: block;
-        height: 100%;
+        height: 1px;
         position: absolute;
         transition: all .2s ease-out;
         width: 100%;
